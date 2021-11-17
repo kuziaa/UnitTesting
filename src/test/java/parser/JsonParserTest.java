@@ -136,9 +136,10 @@ class JsonParserTest {
 
         Cart cart = jsonParser.readFromFile(file);
 
-        assertEquals(cart.getCartName(), emptyCartName);
-        assertEquals(cart.getTotalPrice(), 0);
-
+        assertAll(
+                () -> assertEquals(cart.getCartName(), emptyCartName),
+                () -> assertEquals(cart.getTotalPrice(), 0)
+        );
     }
 
     @Test
