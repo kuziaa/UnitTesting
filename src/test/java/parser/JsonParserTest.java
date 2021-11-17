@@ -2,17 +2,12 @@ package parser;
 
 import com.google.gson.Gson;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 import shop.Cart;
-import shop.RealItem;
-import shop.VirtualItem;
 import supportClasses.CartCreator;
 import supportClasses.FileCreator;
 import supportClasses.MyFileReader;
 
 import java.io.*;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -112,6 +107,7 @@ class JsonParserTest {
         assertThrows(FileNotFoundException.class, () -> jsonParser.readFromFile(file));
     }
 
+    @Disabled("Disabled until the expected narrative is figured out")
     @Test
     void readFromFileWithUnexpectedStructure() throws IOException {
 
