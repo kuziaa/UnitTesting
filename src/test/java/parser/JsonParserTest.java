@@ -104,7 +104,7 @@ class JsonParserTest {
     void readFromFileNoFile() {
 
         File file = new File("random_path");
-        assertThrows(FileNotFoundException.class, () -> jsonParser.readFromFile(file));
+        assertThrows(NoSuchFileException.class, () -> jsonParser.readFromFile(file));
     }
 
     @Disabled("Disabled until the expected narrative is figured out")
