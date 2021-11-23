@@ -6,9 +6,6 @@ import shop.VirtualItem;
 
 public class CartCreator {
 
-    private final String NAME_PREFIX = "test_";
-    private final String NAME_POSTFIX = "_test";
-
     public Cart emptyCart(String cartName) {
         return new Cart(cartName);
     }

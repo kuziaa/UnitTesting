@@ -11,13 +11,11 @@ import java.io.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import static supportClasses.PrefixPostfixPath.*;
+
 class JsonParserTest {
 
     private JsonParser jsonParser;
-
-    private final String NAME_PREFIX = "test_";
-    private final String NAME_POSTFIX = "_test";
-    private final String BASE_PATH = "src/main/resources/";
 
     @BeforeEach
     void beforeEachSetUp() {
